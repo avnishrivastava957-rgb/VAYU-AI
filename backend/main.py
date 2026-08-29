@@ -21,3 +21,7 @@ def health():
     return {
         "status": "healthy"
     }
+@app.get("/forecast")
+def forecast():
+    result = vayu_app.invoke({})
+    return result
